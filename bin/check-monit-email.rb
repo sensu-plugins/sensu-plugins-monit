@@ -29,7 +29,6 @@
 #
 
 # !/usr/bin/env ruby
-require 'rubygems' if RUBY_VERSION < '1.9.0'
 require 'socket'
 require 'mail'
 require 'json'
