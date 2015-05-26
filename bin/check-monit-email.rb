@@ -1,6 +1,6 @@
 #! /usr/bin/env ruby
 #
-#   <script name>
+#   check-monit-email.rb
 #
 # DESCRIPTION:
 #   what is this thing supposed to do, monitor?  How do alerts or
@@ -14,7 +14,7 @@
 #
 # DEPENDENCIES:
 #   gem: sensu-plugin
-#   gem: <?>
+#   gem: mail
 #
 # USAGE:
 #   example commands
