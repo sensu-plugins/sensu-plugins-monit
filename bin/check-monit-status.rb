@@ -62,15 +62,8 @@ class CheckMonit < Sensu::Plugin::Check::CLI
 
       next if ignored.include? name
 
-      # #YELLOW
-      unless %w( 1 5 ).include? monitored # rubocop:disable IfUnlessModifier
-        unknown "#{name} status unkown"
-      end
-
-      # #YELLOW
-      unless status == '0' # rubocop:disable IfUnlessModifier
-        critical "#{name} status failed"
-      end
+      unknown "#{name} status unkown" unless %w( 1 5 ).include? monitored
+      critical "#{name} status failed" unless status == '0'
     end
 
     ok 'All services OK'
@@ -79,12 +72,7 @@ class CheckMonit < Sensu::Plugin::Check::CLI
   def monit_status
     res = Net::HTTP.start(config[:host], config[:port]) do |http|
       req = Net::HTTP::Get.new(config[:uri])
-
-      # #YELLOW
-      unless config[:user].nil? # rubocop:disable IfUnlessModifier
-        req.basic_auth config[:user], config[:pass]
-      end
-
+      req.basic_auth config[:user], config[:pass] unless config[:user].nil?
       http.request(req)
     end
 
