@@ -1,6 +1,6 @@
 ## Sensu-Plugins-monit
 
-[![Build Status](https://travis-ci.org/sensu-plugins/sensu-plugins-monit.svg?branch=master)](https://travis-ci.org/sensu-plugins/sensu-plugins-monit)
+[ ![Build Status](https://travis-ci.org/sensu-plugins/sensu-plugins-monit.svg?branch=master)](https://travis-ci.org/sensu-plugins/sensu-plugins-monit)
 [![Gem Version](https://badge.fury.io/rb/sensu-plugins-monit.svg)](http://badge.fury.io/rb/sensu-plugins-monit)
 [![Code Climate](https://codeclimate.com/github/sensu-plugins/sensu-plugins-monit/badges/gpa.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-monit)
 [![Test Coverage](https://codeclimate.com/github/sensu-plugins/sensu-plugins-monit/badges/coverage.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-monit)
