@@ -50,11 +50,11 @@ class ParseEmail
   def service
     return @service if @service
     service_string = token.body.match(/Service: .*/)
-    if service_string
-      @service = service_string.split(': ')[1]
-    else
-      @service = token.subject.sub(/([^ ]+) *.*/, '\1')
-    end
+    @service = if service_string
+                 service_string.split(': ')[1]
+               else
+                 token.subject.sub(/([^ ]+) *.*/, '\1')
+               end
   end
 
   def alert

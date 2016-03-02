@@ -5,7 +5,6 @@
 [![Code Climate](https://codeclimate.com/github/sensu-plugins/sensu-plugins-monit/badges/gpa.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-monit)
 [![Test Coverage](https://codeclimate.com/github/sensu-plugins/sensu-plugins-monit/badges/coverage.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-monit)
 [![Dependency Status](https://gemnasium.com/sensu-plugins/sensu-plugins-monit.svg)](https://gemnasium.com/sensu-plugins/sensu-plugins-monit)
-[ ![Codeship Status for sensu-plugins/sensu-plugins-monit](https://codeship.com/projects/2ad2d5f0-e89c-0132-b8db-62885e5c211b/status?branch=master)](https://codeship.com/projects/82845)
 
 ## Functionality
 
