@@ -16,7 +16,7 @@ notifications:
     on_failure: always
 script:
 - bundle exec rake default
-- gem build sensu-plugins-monitgemspec
+- gem build sensu-plugins-monit.gemspec
 - gem install sensu-plugins-monit-*.gem
 deploy:
   provider: rubygems
