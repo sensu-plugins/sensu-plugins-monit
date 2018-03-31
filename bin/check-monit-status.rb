@@ -51,6 +51,12 @@ class CheckMonit < Sensu::Plugin::Check::CLI
          short: '-i ignore',
          default: ''
 
+  option :ignore_unmonitored,
+         long: '--ignore-unmonitored',
+         short: '-m',
+         default: false,
+         boolean: true
+
   def run
     status_doc = REXML::Document.new(monit_status)
     ignored = config[:ignore].split(',')
@@ -61,7 +67,7 @@ class CheckMonit < Sensu::Plugin::Check::CLI
       status = svc.elements['status'].text
 
       next if ignored.include? name
-
+      next if monitored == '0' && config[:ignore_unmonitored]
       unknown "#{name} status unkown" unless %w( 1 5 ).include? monitored
       critical "#{name} status failed" unless status == '0'
     end

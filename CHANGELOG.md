@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachangelog.com/)
 
 ## [Unreleased]
+### Added
+- Added `--ignore-unmonitored, -m` option to ignore any checks that are unmonitored which would normally trigger an unknown status @rwky
+
 ### Changed
 - Change `sensu-plugin` dependency to `~> 1.2` (@eheydrick)
 
